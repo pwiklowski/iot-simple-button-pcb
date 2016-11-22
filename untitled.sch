@@ -6136,84 +6136,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="gy-521">
-<packages>
-<package name="GY-521">
-<pad name="SDA" x="-8.89" y="1.27" drill="0.8" diameter="1.778" shape="long"/>
-<pad name="XDA" x="-8.89" y="-1.27" drill="0.8" diameter="1.778" shape="long"/>
-<pad name="SCL" x="-8.89" y="3.81" drill="0.8" diameter="1.778" shape="long"/>
-<pad name="GND" x="-8.89" y="6.35" drill="0.8" diameter="1.778" shape="long"/>
-<pad name="VCC" x="-8.89" y="8.89" drill="0.8" diameter="1.778" shape="long"/>
-<pad name="XCL" x="-8.89" y="-3.81" drill="0.8" diameter="1.778" shape="long"/>
-<pad name="ADO" x="-8.89" y="-6.35" drill="0.8" diameter="1.778" shape="long"/>
-<pad name="INT" x="-8.89" y="-8.89" drill="0.8" diameter="1.778" shape="long"/>
-<wire x1="-11.43" y1="10.795" x2="4.445" y2="10.795" width="0.127" layer="21"/>
-<wire x1="4.445" y1="10.795" x2="4.445" y2="-10.16" width="0.127" layer="21"/>
-<wire x1="4.445" y1="-10.16" x2="-11.43" y2="-10.16" width="0.127" layer="21"/>
-<wire x1="-11.43" y1="-10.16" x2="-11.43" y2="10.795" width="0.127" layer="21"/>
-<wire x1="-2.54" y1="-8.89" x2="1.27" y2="-8.89" width="0.127" layer="21"/>
-<wire x1="1.27" y1="-8.89" x2="0.635" y2="-8.255" width="0.127" layer="21"/>
-<wire x1="1.27" y1="-8.89" x2="0.635" y2="-9.525" width="0.127" layer="21"/>
-<wire x1="-2.54" y1="-8.89" x2="-2.54" y2="-5.08" width="0.127" layer="21"/>
-<wire x1="-2.54" y1="-5.08" x2="-1.905" y2="-5.715" width="0.127" layer="21"/>
-<wire x1="-2.54" y1="-5.08" x2="-3.175" y2="-5.715" width="0.127" layer="21"/>
-<text x="1.905" y="-8.89" size="1.27" layer="21">x</text>
-<text x="-1.27" y="-5.08" size="1.27" layer="21">y</text>
-<text x="3.81" y="-1.27" size="1.27" layer="21" rot="R90">ITG/MPU</text>
-</package>
-</packages>
-<symbols>
-<symbol name="MPU6050">
-<wire x1="-10.16" y1="17.78" x2="-10.16" y2="-22.86" width="0.6096" layer="94"/>
-<wire x1="-10.16" y1="-22.86" x2="17.78" y2="-22.86" width="0.6096" layer="94"/>
-<wire x1="17.78" y1="-22.86" x2="17.78" y2="17.78" width="0.6096" layer="94"/>
-<wire x1="17.78" y1="17.78" x2="-10.16" y2="17.78" width="0.6096" layer="94"/>
-<text x="13.716" y="-9.398" size="1.778" layer="94" rot="R270">GY-521</text>
-<text x="15.24" y="-7.62" size="1.778" layer="94" rot="R90">ITG/MPU</text>
-<pin name="VCC" x="-15.24" y="15.24" length="middle"/>
-<pin name="GND" x="-15.24" y="10.16" length="middle"/>
-<pin name="SCL" x="-15.24" y="5.08" length="middle"/>
-<pin name="SDA" x="-15.24" y="0" length="middle"/>
-<pin name="XDA" x="-15.24" y="-5.08" length="middle"/>
-<pin name="XCL" x="-15.24" y="-10.16" length="middle"/>
-<pin name="ADO" x="-15.24" y="-15.24" length="middle"/>
-<pin name="INT" x="-15.24" y="-20.32" length="middle"/>
-<wire x1="2.54" y1="-20.32" x2="7.62" y2="-20.32" width="0.3048" layer="94"/>
-<wire x1="7.62" y1="-20.32" x2="6.35" y2="-19.05" width="0.3048" layer="94"/>
-<wire x1="7.62" y1="-20.32" x2="6.35" y2="-21.59" width="0.3048" layer="94"/>
-<wire x1="2.54" y1="-20.32" x2="2.54" y2="-15.24" width="0.3048" layer="94"/>
-<wire x1="2.54" y1="-15.24" x2="1.27" y2="-16.51" width="0.3048" layer="94"/>
-<wire x1="2.54" y1="-15.24" x2="3.81" y2="-16.51" width="0.3048" layer="94"/>
-<text x="8.89" y="-21.082" size="1.778" layer="94">x</text>
-<text x="5.08" y="-15.24" size="1.778" layer="94">y</text>
-<text x="-1.524" y="14.732" size="1.778" layer="94">3.3V (or 5v)</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GY-521" prefix="U">
-<gates>
-<gate name="G$1" symbol="MPU6050" x="-2.54" y="5.08"/>
-</gates>
-<devices>
-<device name="MPU6050" package="GY-521">
-<connects>
-<connect gate="G$1" pin="ADO" pad="ADO"/>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="INT" pad="INT"/>
-<connect gate="G$1" pin="SCL" pad="SCL"/>
-<connect gate="G$1" pin="SDA" pad="SDA"/>
-<connect gate="G$1" pin="VCC" pad="VCC"/>
-<connect gate="G$1" pin="XCL" pad="XCL"/>
-<connect gate="G$1" pin="XDA" pad="XDA"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="mike-temp">
 <packages>
 <package name="RFM69CW-XXXS2">
@@ -7035,6 +6957,137 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="texas">
+<description>&lt;b&gt;Texas Instruments Devices&lt;/b&gt;&lt;p&gt;
+ &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="SOT23-DBV">
+<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt; DBV (R-PDSO-G5)&lt;p&gt;
+Source: http://focus.ti.com/lit/ds/symlink/tps77001.pdf</description>
+<wire x1="1.422" y1="0.81" x2="1.422" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.422" y1="-0.81" x2="-1.422" y2="-0.81" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="-0.81" x2="-1.422" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-1.422" y1="0.81" x2="1.422" y2="0.81" width="0.1524" layer="51"/>
+<wire x1="-0.522" y1="0.81" x2="0.522" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-0.428" y1="-0.81" x2="-0.522" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="0.522" y1="-0.81" x2="0.428" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="-1.328" y1="-0.81" x2="-1.422" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.422" y1="-0.81" x2="1.328" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.328" y1="0.81" x2="1.422" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-1.422" y1="0.81" x2="-1.328" y2="0.81" width="0.1524" layer="21"/>
+<smd name="1" x="-0.95" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="2" x="0" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="3" x="0.95" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="4" x="0.95" y="1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="5" x="-0.95" y="1.3" dx="0.55" dy="1.2" layer="1"/>
+<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-3.429" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.2" y1="-1.5" x2="-0.7" y2="-0.85" layer="51"/>
+<rectangle x1="-0.25" y1="-1.5" x2="0.25" y2="-0.85" layer="51"/>
+<rectangle x1="0.7" y1="-1.5" x2="1.2" y2="-0.85" layer="51"/>
+<rectangle x1="0.7" y1="0.85" x2="1.2" y2="1.5" layer="51"/>
+<rectangle x1="-1.2" y1="0.85" x2="-0.7" y2="1.5" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="TPS770XX">
+<wire x1="-7.62" y1="7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<text x="-7.62" y="8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="IN" x="-10.16" y="5.08" length="short" direction="in"/>
+<pin name="!EN" x="-10.16" y="0" length="short" direction="in"/>
+<pin name="NC/FB" x="12.7" y="-5.08" length="short" direction="pas" rot="R180"/>
+<pin name="OUT" x="12.7" y="5.08" length="short" direction="pas" rot="R180"/>
+<pin name="GND" x="-10.16" y="-5.08" length="short" direction="pwr"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TPS770*" prefix="IC">
+<description>&lt;b&gt;ULTRALOW-POWER 50-mA LOW-DROPOUT LINEAR REGULATORS&lt;/b&gt;&lt;p&gt;
+50-mA Low-Dropout Regulator&lt;br&gt;
+Source: http://focus.ti.com/lit/ds/symlink/tps77001.pdf</description>
+<gates>
+<gate name="G$1" symbol="TPS770XX" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23-DBV">
+<connects>
+<connect gate="G$1" pin="!EN" pad="3"/>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="IN" pad="1"/>
+<connect gate="G$1" pin="NC/FB" pad="4"/>
+<connect gate="G$1" pin="OUT" pad="5"/>
+</connects>
+<technologies>
+<technology name="01">
+<attribute name="MF" value="TEXAS INSTRUMENTS" constant="no"/>
+<attribute name="MPN" value="TPS77001DBVT" constant="no"/>
+<attribute name="OC_FARNELL" value="8461554" constant="no"/>
+<attribute name="OC_NEWARK" value="77C1171" constant="no"/>
+</technology>
+<technology name="12">
+<attribute name="MF" value="TEXAS INSTRUMENT CONNECTORS" constant="no"/>
+<attribute name="MPN" value="TPS77012DBVR" constant="no"/>
+<attribute name="OC_FARNELL" value="1412877" constant="no"/>
+<attribute name="OC_NEWARK" value="77C1172" constant="no"/>
+</technology>
+<technology name="15">
+<attribute name="MF" value="TEXAS INSTRUMENT CONNECTORS" constant="no"/>
+<attribute name="MPN" value="TPS77015DBVT" constant="no"/>
+<attribute name="OC_FARNELL" value="1412879" constant="no"/>
+<attribute name="OC_NEWARK" value="77C1175" constant="no"/>
+</technology>
+<technology name="18">
+<attribute name="MF" value="TEXAS INSTRUMENT CONNECTORS" constant="no"/>
+<attribute name="MPN" value="TPS77018DBVR" constant="no"/>
+<attribute name="OC_FARNELL" value="1575745" constant="no"/>
+<attribute name="OC_NEWARK" value="77C1176" constant="no"/>
+</technology>
+<technology name="25">
+<attribute name="MF" value="TEXAS INSTRUMENTS" constant="no"/>
+<attribute name="MPN" value="TPS77025DBVR" constant="no"/>
+<attribute name="OC_FARNELL" value="1412881" constant="no"/>
+<attribute name="OC_NEWARK" value="77C1178" constant="no"/>
+</technology>
+<technology name="27">
+<attribute name="MF" value="TEXAS INSTRUMENT CONNECTORS" constant="no"/>
+<attribute name="MPN" value="TPS77027DBVT" constant="no"/>
+<attribute name="OC_FARNELL" value="1510191" constant="no"/>
+<attribute name="OC_NEWARK" value="77C1181" constant="no"/>
+</technology>
+<technology name="28">
+<attribute name="MF" value="TEXAS INSTRUMENT CONNECTORS" constant="no"/>
+<attribute name="MPN" value="TPS77028DBVR" constant="no"/>
+<attribute name="OC_FARNELL" value="1412882" constant="no"/>
+<attribute name="OC_NEWARK" value="77C1182" constant="no"/>
+</technology>
+<technology name="30">
+<attribute name="MF" value="TEXAS INSTRUMENTS" constant="no"/>
+<attribute name="MPN" value="TPS77030DBVT" constant="no"/>
+<attribute name="OC_FARNELL" value="1207348" constant="no"/>
+<attribute name="OC_NEWARK" value="77C1185" constant="no"/>
+</technology>
+<technology name="33">
+<attribute name="MF" value="TEXAS INSTRUMENTS" constant="no"/>
+<attribute name="MPN" value="TPS77033DBVT" constant="no"/>
+<attribute name="OC_FARNELL" value="8461570" constant="no"/>
+<attribute name="OC_NEWARK" value="77C1187" constant="no"/>
+</technology>
+<technology name="50">
+<attribute name="MF" value="TEXAS INSTRUMENT CONNECTORS" constant="no"/>
+<attribute name="MPN" value="TPS77050DBVT" constant="no"/>
+<attribute name="OC_FARNELL" value="1412883" constant="no"/>
+<attribute name="OC_NEWARK" value="77C1189" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7054,10 +7107,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="VCC" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="SUPPLY6" library="supply2" deviceset="VCC" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="VCC" device=""/>
-<part name="U1" library="gy-521" deviceset="GY-521" device="MPU6050"/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="M1206"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="SUPPLY8" library="supply2" deviceset="VCC" device=""/>
 <part name="U2" library="mike-temp" deviceset="RFM69" device="CW"/>
@@ -7079,10 +7129,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="PAD11" library="wirepad" deviceset="SMD2" device=""/>
 <part name="PAD12" library="wirepad" deviceset="SMD2" device=""/>
-<part name="PAD13" library="wirepad" deviceset="SMD2" device=""/>
-<part name="PAD14" library="wirepad" deviceset="SMD2" device=""/>
 <part name="TP2" library="testpad" deviceset="TPSQ" device="TP20SQ"/>
 <part name="TP1" library="testpad" deviceset="TPSQ" device="TP20SQ"/>
+<part name="IC1" library="texas" deviceset="TPS770*" device="" technology="15"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="M0805"/>
+<part name="R4" library="rcl" deviceset="R-EU_" device="M0805"/>
+<part name="GND8" library="supply1" deviceset="GND" device=""/>
+<part name="C2" library="rcl" deviceset="C-EU" device="C1206"/>
 </parts>
 <sheets>
 <sheet>
@@ -7097,13 +7150,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="SUPPLY4" gate="G$1" x="-5.08" y="96.52"/>
 <instance part="GND2" gate="1" x="109.22" y="124.46"/>
 <instance part="SUPPLY5" gate="G$1" x="109.22" y="147.32"/>
-<instance part="GND5" gate="1" x="17.78" y="66.04"/>
-<instance part="SUPPLY6" gate="G$1" x="-15.24" y="76.2"/>
+<instance part="GND5" gate="1" x="7.62" y="68.58"/>
 <instance part="SUPPLY7" gate="G$1" x="129.54" y="73.66"/>
-<instance part="U1" gate="G$1" x="116.84" y="190.5" rot="R90"/>
-<instance part="R2" gate="G$1" x="-5.08" y="73.66" rot="R180"/>
-<instance part="GND6" gate="1" x="-15.24" y="45.72" rot="R90"/>
-<instance part="SUPPLY8" gate="G$1" x="-15.24" y="43.18" rot="R270"/>
+<instance part="GND6" gate="1" x="-91.44" y="109.22"/>
+<instance part="SUPPLY8" gate="G$1" x="-43.18" y="132.08" rot="R270"/>
 <instance part="U2" gate="G$1" x="48.26" y="20.32"/>
 <instance part="GND3" gate="1" x="73.66" y="7.62"/>
 <instance part="IC2" gate="MCU" x="38.1" y="119.38"/>
@@ -7113,21 +7163,24 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="PAD1" gate="1" x="127" y="66.04" rot="R90"/>
 <instance part="PAD2" gate="1" x="129.54" y="66.04" rot="R90"/>
 <instance part="PAD3" gate="1" x="111.76" y="99.06" rot="R180"/>
-<instance part="PAD4" gate="1" x="111.76" y="96.52" rot="R180"/>
+<instance part="PAD4" gate="1" x="111.76" y="91.44" rot="R180"/>
 <instance part="PAD5" gate="1" x="93.98" y="139.7" rot="R180"/>
-<instance part="PAD6" gate="1" x="93.98" y="137.16" rot="R180"/>
+<instance part="PAD6" gate="1" x="93.98" y="132.08" rot="R180"/>
 <instance part="PAD7" gate="1" x="101.6" y="139.7"/>
 <instance part="PAD8" gate="1" x="101.6" y="137.16"/>
 <instance part="PAD9" gate="1" x="111.76" y="104.14" rot="R180"/>
 <instance part="PAD10" gate="1" x="111.76" y="106.68" rot="R180"/>
 <instance part="SUPPLY9" gate="G$1" x="109.22" y="109.22"/>
 <instance part="GND7" gate="1" x="109.22" y="101.6"/>
-<instance part="PAD11" gate="1" x="-25.4" y="45.72"/>
-<instance part="PAD12" gate="1" x="-25.4" y="43.18"/>
-<instance part="PAD13" gate="1" x="7.62" y="68.58" rot="R90"/>
-<instance part="PAD14" gate="1" x="10.16" y="68.58" rot="R90"/>
+<instance part="PAD11" gate="1" x="-93.98" y="121.92"/>
+<instance part="PAD12" gate="1" x="-96.52" y="132.08"/>
 <instance part="TP2" gate="G$1" x="66.04" y="12.7" rot="R90"/>
 <instance part="TP1" gate="G$1" x="68.58" y="20.32" rot="R90"/>
+<instance part="IC1" gate="G$1" x="-66.04" y="127"/>
+<instance part="R3" gate="G$1" x="-45.72" y="127" rot="R90"/>
+<instance part="R4" gate="G$1" x="-48.26" y="114.3" rot="R90"/>
+<instance part="GND8" gate="1" x="-48.26" y="104.14"/>
+<instance part="C2" gate="G$1" x="-38.1" y="218.44" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -7140,6 +7193,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="-20.32" y1="203.2" x2="-22.86" y2="208.28" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="-22.86" y1="208.28" x2="-33.02" y2="203.2" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="-33.02" y1="218.44" x2="-22.86" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="218.44" x2="-22.86" y2="208.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="104.14" y1="139.7" x2="111.76" y2="139.7" width="0.1524" layer="91"/>
@@ -7150,15 +7206,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="PAD7" gate="1" pin="P"/>
 </segment>
 <segment>
-<pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="10.16" y1="71.12" x2="17.78" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="71.12" x2="17.78" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="PAD14" gate="1" pin="P"/>
-</segment>
-<segment>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="-22.86" y1="45.72" x2="-17.78" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-91.44" y1="121.92" x2="-91.44" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="PAD11" gate="1" pin="P"/>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<wire x1="-91.44" y1="121.92" x2="-76.2" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="GND@2"/>
@@ -7182,6 +7234,17 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="PAD9" gate="1" pin="P"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+<wire x1="-48.26" y1="106.68" x2="-48.26" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="15.24" y1="78.74" x2="7.62" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="78.74" x2="7.62" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="MCU" pin="BOOT0"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -7191,6 +7254,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="-53.34" y1="200.66" x2="-45.72" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="-45.72" y1="193.04" x2="-40.64" y2="203.2" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="-40.64" y1="218.44" x2="-53.34" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="218.44" x2="-53.34" y2="200.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
@@ -7207,16 +7273,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="109.22" y1="144.78" x2="109.22" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="137.16" x2="104.14" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="PAD8" gate="1" pin="P"/>
-</segment>
-<segment>
-<pinref part="SUPPLY6" gate="G$1" pin="VCC"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-15.24" y1="73.66" x2="-10.16" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="SUPPLY8" gate="G$1" pin="VCC"/>
-<wire x1="-22.86" y1="43.18" x2="-17.78" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="PAD12" gate="1" pin="P"/>
 </segment>
 <segment>
 <pinref part="SUPPLY7" gate="G$1" pin="VCC"/>
@@ -7238,6 +7294,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="PAD10" gate="1" pin="P"/>
 <pinref part="SUPPLY9" gate="G$1" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="OUT"/>
+<pinref part="SUPPLY8" gate="G$1" pin="VCC"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="-45.72" y1="132.08" x2="-53.34" y2="132.08" width="0.1524" layer="91"/>
+<junction x="-45.72" y="132.08"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -7282,8 +7345,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <net name="N$7" class="0">
 <segment>
 <pinref part="PAD6" gate="1" pin="P"/>
-<wire x1="91.44" y1="137.16" x2="78.74" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="137.16" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="132.08" x2="78.74" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="132.08" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="MCU" pin="PA13"/>
 <wire x1="78.74" y1="111.76" x2="60.96" y2="111.76" width="0.1524" layer="91"/>
 </segment>
@@ -7299,22 +7362,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </net>
 <net name="N$9" class="0">
 <segment>
-<wire x1="60.96" y1="99.06" x2="101.6" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="99.06" x2="101.6" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="96.52" x2="109.22" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="MCU" pin="PA8"/>
+<wire x1="101.6" y1="104.14" x2="101.6" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="91.44" x2="109.22" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="PAD4" gate="1" pin="P"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<wire x1="15.24" y1="78.74" x2="7.62" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="7.62" y1="78.74" x2="7.62" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="7.62" y1="73.66" x2="7.62" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="0" y1="73.66" x2="7.62" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="MCU" pin="BOOT0"/>
-<pinref part="PAD13" gate="1" pin="P"/>
+<pinref part="IC2" gate="MCU" pin="PA10"/>
+<wire x1="60.96" y1="104.14" x2="101.6" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -7354,6 +7406,27 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="U2" gate="G$1" pin="ANT"/>
 <pinref part="TP2" gate="G$1" pin="TP"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="IN"/>
+<pinref part="PAD12" gate="1" pin="P"/>
+<wire x1="-93.98" y1="132.08" x2="-83.82" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="!EN"/>
+<wire x1="-83.82" y1="132.08" x2="-76.2" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="-76.2" y1="127" x2="-83.82" y2="127" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="127" x2="-83.82" y2="132.08" width="0.1524" layer="91"/>
+<junction x="-83.82" y="132.08"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="NC/FB"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="-53.34" y1="121.92" x2="-45.72" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="-48.26" y1="119.38" x2="-45.72" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
